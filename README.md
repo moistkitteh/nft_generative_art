@@ -1,7 +1,11 @@
 # nft_genertive_art
 This python script is for creating generative art
 
-Below is a list of dependencies to run this script
+to run,
+
+        python3 generative_art.py
+
+If you have the following things set up, this should run without issue
 
         Code Libraries/Packages
           python3 --> sudo apt-get update
