@@ -1,0 +1,19 @@
+#Weights for all of the traits
+#The directories and files are sorted alphabetically
+#**** MAKE SURE ALL WEIGHTS ADD UP TO 1.0 FOR EACH TRAIT*****
+#Trait 1
+0.60
+0.30
+0.10
+#Trait 2
+0.30
+0.30
+0.20
+0.10
+0.10
+#Trait 3
+0.20
+0.20
+0.20
+0.20
+0.20
