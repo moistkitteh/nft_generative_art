@@ -6,7 +6,6 @@ Below is a list of dependencies to run this script
         Code Libraries/Packages
         
           python3 --> sudo apt-get update
-        
                       sudo apt-get install python3.8
           
           PIL     --> python3 -m pip install --upgrade Pillow
@@ -72,7 +71,8 @@ Directory Structure:
             trait3/ 
              
 
-Notes:
+   Notes:
+   
         1) The subdirectories in traits/ will be parsed alphanumerically, meaning that the first directory name that is encountered 
                will be the bottom layer/background, the second dirctory name will be the layer above the background, etc. The filenames
                within the subdirectories will also be parsed alphanumerically and assigned weights that way as well. For example,
