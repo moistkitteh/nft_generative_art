@@ -1,11 +1,11 @@
 # nft_genertive_art
 This python script is for creating generative art.
 
-The files and subfolders within this repository are all set up to be able to run this out of the box. If you run this script from the command line with the following,
+The files and subfolders within this repository are all set up to be able to run this out of the box with the example setup. If you run this script from the command line with the following,
 
         python3 generative_art.py
 
-this should run without issue to genrate 36 images in the images/ folder based on the traits in the traits/ folder and the weights in weights.dat. It will also update the
+this should run without issue to generate 36 images in the images/ folder based on the traits in the traits/ folder and the weights in weights.dat. It will also update the
 rarity.csv and imagetraits.csv files, which are tables which respectively describe the rarity of different traits and the traits associated with each image
 
 Below are all of the necessary dependencies
