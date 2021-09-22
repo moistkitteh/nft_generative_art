@@ -3,23 +3,23 @@ This python script is for creating generative art
 
 Below is a list of dependencies to run this script
         Code Libraries/Packages
-        # python3 --> sudo apt-get update
-        #             sudo apt-get install python3.8
-        # PIL     --> python3 -m pip install --upgrade Pillow
-        # random  --> (installed with python3)
+          python3 --> sudo apt-get update
+                      sudo apt-get install python3.8
+          PIL     --> python3 -m pip install --upgrade Pillow
+          random  --> (installed with python3)
         
         Files (These need to be made before running)
-        #  weights.dat -- list of all of the desired weights for each trait
-        #  tnames.dat -- list of the actual trait names
+           weights.dat -- list of all of the desired weights for each trait
+           tnames.dat -- list of the actual trait names
         
         Directories (These directories need to be built ahead of time)
-        #  images/ -- directory to store generated images [name changeable]
-        #  traits/ -- directory that trait images will be pulled up from. Layers will be added alphabetically/numerical by directory name
+           images/ -- directory to store generated images [name changeable]
+           traits/ -- directory that trait images will be pulled up from. Layers will be added alphabetically/numerical by directory name
           
         User Set Variables (These are set within the code)
-        #  nf -- final number of art pieces you want
-        #  dout -- directory to store all of the created image
-        #  dtraits -- directory where all traits are stored
+           nf -- final number of art pieces you want
+           dout -- directory to store all of the created image
+           dtraits -- directory where all traits are stored
 
 Directory Structure:
    nft_art_main/
