@@ -141,7 +141,7 @@ def main():
 		#Export Image
 		fout = dout+'image'+str(i)+'.png'
 		l1.save(fout,quality=95)
-		print('Image #'+str(i)+'exported')
+		print('Image #'+str(i)+' exported')
 	print('Done!')	
 	
 	#Calculate Rarity Table and Export Image to Trait Table

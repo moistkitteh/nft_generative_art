@@ -82,4 +82,3 @@ Directory Structure:
         5) jpg files don't allow you to make anything transparent, and while jpg is usable within the code it's a better practice to use .png files        
         6) The code will output a rarity table and a masterlist that links each image # to all of the traits it posseses. These are .csv's and can be viewed in excel or 
                an equivalent program
-        7) This does NOT generate the json metadata files, I'll be uploading a script to do that eventually (9/22/2021)      

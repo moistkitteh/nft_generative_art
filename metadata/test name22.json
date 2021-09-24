@@ -1,0 +1,19 @@
+{
+	"name": "test name #22",
+	"description": "test description",
+	"image": "ipfs/[IPFSHASH]/22.png",
+	"attributes":[
+		{
+			"trait_type": "Background",
+			"value": "Purple"
+		},
+		{
+			"trait_type": "Shape",
+			"value": "circle"
+		},
+		{
+			"trait_type": "Emotion",
+			"value": "shrug"
+		}
+	]
+}
