@@ -4,7 +4,7 @@ def main():
 	###YOU NEED TO MANUALLY SET ALL OF THESE####
 	iname = 'image'					#default filename you used for your images you uploaded to pinata
 	itype = '.png'  				#the file extension you exported with
-	address= 'https://gateway.pinata.cloud/ipfs/' 	#The past to the directory all of your images are hosted at
+	address= 'https://gateway.pinata.cloud/ipfs/QmVkMDLfTV7ERn6UvncNAuLWgFADD4L9PZgZkg1TaUMUkX' 	#The past to the directory all of your images are hosted at
 	mpath = 'metadata/'				#The path to the local folder you want all your metadata files saved at
 	descr = 'test description'			#The description you wanted saved in all of your metadata files
 
@@ -37,10 +37,15 @@ def main():
 			if(y==x[0]):
 				num = y
 			else:
+				
 				json.write('\t\t{\n')
 				json.write('\t\t\t"trait_type": "'+tnames[z]+'",\n')
 				json.write('\t\t\t"value": "'+y+'"\n')
-				json.write('\t\t}\n')
+				if(z==len(x)-2):
+					json.write('\t\t}\n')
+				else:
+					json.write('\t\t},\n')
+				z = z+1
 		json.write('\t\t],\n')
 		json.write('\t\t"description": "'+descr+'",\n')
 		json.write('\t\t"image": "'+address+'/'+iname+num+itype+'",\n')
