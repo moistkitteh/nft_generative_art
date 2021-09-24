@@ -8,7 +8,7 @@ The files and subfolders within this repository are all set up to be able to run
 this should run without issue to generate 36 images in the images/ folder based on the traits in the traits/ folder and the weights in weights.dat. It will also update the
 rarity.csv and imagetraits.csv files, which are tables which respectively describe the rarity of different traits and the traits associated with each image
 
-Below are all of the necessary dependencies
+Below are all of the necessary dependencies, files/directories to make, and variables to set before you run the code
 
         Code Libraries/Packages
           python3 --> sudo apt-get update
@@ -30,8 +30,12 @@ Below are all of the necessary dependencies
            dout -- directory to store all of the created image
            dtraits -- directory where all traits are stored
 
-To make the metadata json files, first you need to create an account on an IPFS system like Pinata, and upload the directory (not the individual files) containing all of your generated images. Once you've done that, write down the CID of the directory you uploaded. Each of the images are saved as https://gateway.pinata.cloud/ipfs/CID/image0.png, where the CID is the address of the directory and the image0.png is the filename of the image you uploaded that is within that directory. This allows us to easily loop through all of the images you uploaded. Once you have the CID written down, set the following variables in the file make_metadata.py
-        
+To make the metadata json files, first you need to create an account on an IPFS system like Pinata, and upload the directory (not the individual files) containing all of your generated images. Once you've done that, write down the CID of the directory you uploaded. Each of the images are saved as https://gateway.pinata.cloud/ipfs/CID/image0.png, where the CID is the address of the directory and the image0.png is the filename of the image you uploaded that is within that directory. This allows us to easily loop through all of the images you uploaded. Once you have the CID written down, make the following directory in your project folder and set the following variables in the file make_metadata.py
+       
+      Directories
+        metadata/ = directory that the metadata files will be saved to
+       
+      User Set Variables
         iname = default filename you used for the images you generated (in the example, the images are image0.py, image1.py)
         itype = the file extension you exported the generated images as (ex, .png)
         address = the web address plus the CID you stored the directory at (ex, "https://gateway.pinata.cloud/ipfs/CID", where CID is the directory CID you wrote down)
