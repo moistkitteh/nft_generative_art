@@ -30,7 +30,7 @@ Below are all of the necessary dependencies
            dout -- directory to store all of the created image
            dtraits -- directory where all traits are stored
 
-To make the metadata json files, first you need to create an account on an IPFS system like Pinata, and upload the directory (not the individual files) containing all of your generated images. Once you've done that, write down the CID of the directory you uploaded. Each of the images are saved as https://gateway.pinata.cloud/ipfs/CID/image0.png, where the CID is the address of the directory and the image0.png is the filename of the image you uploaded that is within that directory. This allows us to easily loop through all of the address. Once you have the CID written down, set the following variables in the file make_metadata.py
+To make the metadata json files, first you need to create an account on an IPFS system like Pinata, and upload the directory (not the individual files) containing all of your generated images. Once you've done that, write down the CID of the directory you uploaded. Each of the images are saved as https://gateway.pinata.cloud/ipfs/CID/image0.png, where the CID is the address of the directory and the image0.png is the filename of the image you uploaded that is within that directory. This allows us to easily loop through all of the images you uploaded. Once you have the CID written down, set the following variables in the file make_metadata.py
         
         iname = default filename you used for the images you generated (in the example, the images are image0.py, image1.py)
         itype = the file extension you exported the generated images as (ex, .png)
