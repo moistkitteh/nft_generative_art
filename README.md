@@ -13,6 +13,7 @@ Below are all of the necessary dependencies
         Code Libraries/Packages
           python3 --> sudo apt-get update
                       sudo apt-get install python3.8
+          Numpy   --> python3 -m pip install --upgrade numpy
           PIL     --> python3 -m pip install --upgrade Pillow          
           random  --> (installed with python3)
         
@@ -28,6 +29,18 @@ Below are all of the necessary dependencies
            nf -- final number of art pieces you want
            dout -- directory to store all of the created image
            dtraits -- directory where all traits are stored
+
+To make the metadata json files, first you need to create an account on an IPFS system like Pinata, and upload the directory (not the individual files) containing all of your generated images. Once you've done that, write down the CID of the directory you uploaded. Each of the images are saved as https://gateway.pinata.cloud/ipfs/CID/image0.png, where the CID is the address of the directory and the image0.png is the filename of the image you uploaded that is within that directory. This allows us to easily loop through all of the address. Once you have the CID written down, set the following variables in the file make_metadata.py
+        
+        iname = default filename you used for the images you generated (in the example, the images are image0.py, image1.py)
+        itype = the file extension you exported the generated images as (ex, .png)
+        address = the web address plus the CID you stored the directory at (ex, "https://gateway.pinata.cloud/ipfs/CID", where CID is the directory CID you wrote down)
+        mpath = local path to the folder you want all of the metadata files saved at
+        descr = description you want saved in all of your metadata files
+
+Once those variables are set, run the make_metadata.py file with the following
+
+        python3 make_metadata.py
 
 Directory Structure:
 
