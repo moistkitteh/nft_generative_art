@@ -1,0 +1,19 @@
+{
+	"name": " #8",
+	"description": "test description",
+	"image": "ipfs://QmXtr1NjrvafSM2NkzBqEwh8E6uCFFDVGv46uCrf1FXMG1/image8.png",
+	"attributes":[
+		{
+			"trait_type": "Background",
+			"value": "Purple"
+		},
+		{
+			"trait_type": "Shape",
+			"value": "hexagon"
+		},
+		{
+			"trait_type": "Emotion",
+			"value": "sad"
+		}
+	]
+}

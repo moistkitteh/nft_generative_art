@@ -1,0 +1,19 @@
+{
+	"name": " #16",
+	"description": "test description",
+	"image": "ipfs://QmXtr1NjrvafSM2NkzBqEwh8E6uCFFDVGv46uCrf1FXMG1/image16.png",
+	"attributes":[
+		{
+			"trait_type": "Background",
+			"value": "Green"
+		},
+		{
+			"trait_type": "Shape",
+			"value": "flag"
+		},
+		{
+			"trait_type": "Emotion",
+			"value": "mocking"
+		}
+	]
+}
