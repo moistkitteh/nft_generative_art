@@ -1,0 +1,19 @@
+{
+	"name": " #24",
+	"description": "test description",
+	"image": "ipfs://QmXtr1NjrvafSM2NkzBqEwh8E6uCFFDVGv46uCrf1FXMG1/image24.png",
+	"attributes":[
+		{
+			"trait_type": "Background",
+			"value": "Pink"
+		},
+		{
+			"trait_type": "Shape",
+			"value": "flag"
+		},
+		{
+			"trait_type": "Emotion",
+			"value": "mocking"
+		}
+	]
+}

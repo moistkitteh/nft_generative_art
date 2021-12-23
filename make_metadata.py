@@ -2,9 +2,9 @@ import os
 
 def main():
 	###YOU NEED TO MANUALLY SET ALL OF THESE####
-	iname = 'image'					#default filename you used for your images you uploaded to pinata
+	iname = ''					#default filename you used for your files you uploaded to pinata
 	itype = '.png'  				#the file extension you exported with
-	address= 'https://gateway.pinata.cloud/ipfs/QmVkMDLfTV7ERn6UvncNAuLWgFADD4L9PZgZkg1TaUMUkX' 	#The past to the directory all of your images are hosted at
+	address= 'ipfs://QmXtr1NjrvafSM2NkzBqEwh8E6uCFFDVGv46uCrf1FXMG1' 		#The IPFS hash to the directory all of your images are hosted at
 	mpath = 'metadata/'				#The path to the local folder you want all your metadata files saved at
 	descr = 'test description'			#The description you wanted saved in all of your metadata files
 
@@ -12,11 +12,11 @@ def main():
 	#Reading in image and trait information
 	traits=[]
 	tnames=[]
-	with open('imagetraits.csv') as f:
+	with open('imagetraits.csv','rU') as f:
 		for line in f:
 			temp = []
 			line = line.split(',')
-			ll = len(line)
+			# ll = len(line)
 			if(line[0] != 'Image #'):
 				for x in line:
 					if(x != '\n'):
@@ -29,15 +29,18 @@ def main():
 
 	#Writing out metadata files
 	for x in traits:
-		json=open(mpath+iname+x[0]+'.json','w')
+		num = x[0]
+		json=open(mpath+iname+x[0],'w',newline='\n')
 		json.write('{\n')
+		json.write('\t"name": "'+iname+' #'+num+'",\n')
+		json.write('\t"description": "'+descr+'",\n')
+		json.write('\t"image": "'+address+'/image'+num+itype+'",\n')
 		json.write('\t"attributes":[\n')
 		z = 0
 		for y in x:
 			if(y==x[0]):
 				num = y
-			else:
-				
+			else:	
 				json.write('\t\t{\n')
 				json.write('\t\t\t"trait_type": "'+tnames[z]+'",\n')
 				json.write('\t\t\t"value": "'+y+'"\n')
@@ -46,10 +49,7 @@ def main():
 				else:
 					json.write('\t\t},\n')
 				z = z+1
-		json.write('\t\t],\n')
-		json.write('\t\t"description": "'+descr+'",\n')
-		json.write('\t\t"image": "'+address+'/'+iname+num+itype+'",\n')
-		json.write('\t\t"name": "'+iname+' '+num+'"\n')
+		json.write('\t]\n')
 		json.write('}')
 
 if __name__ =='__main__':
